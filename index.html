@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CHARLES SHOP</title>
+<title>CHARLESF SHOP</title>
 <style>
 :root{
   --forest:#173628;
@@ -88,19 +88,33 @@ header.hero{
 }
 .brand{
   display:flex;
+  flex-direction: column;
   align-items:center;
-  gap:10px;
+  gap:15px;
+  margin: 0 auto;
+  text-align: center;
 }
 .brand-mark{
-  width:42px;height:42px;border-radius:11px;
+  width:80px;height:80px;border-radius:50%;
   background:linear-gradient(140deg,var(--gold-soft),var(--gold));
   display:flex;align-items:center;justify-content:center;
-  font-family:'Fraunces',serif;font-weight:700;color:var(--forest-deep);font-size:1.15rem;
+  font-family:'Fraunces',serif;font-weight:700;color:var(--forest-deep);font-size:2.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-.brand-name{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--cream);}
+.brand-name{
+  font-family:'Fraunces',serif;
+  font-size:3.5rem;
+  color:var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
 .brand-name span{color:var(--gold-soft);}
 
-.nav-links{display:flex;gap:26px;font-size:0.92rem;}
+.nav-links{
+  display:flex;gap:26px;font-size:0.92rem;
+  width: 100%; justify-content: center; margin-top: 20px;
+}
 .nav-links a{text-decoration:none;color:var(--sage);opacity:0.85;}
 .nav-links a:hover{opacity:1;}
 
@@ -108,29 +122,30 @@ header.hero{
   max-width:1180px;
   margin:0 auto;
   display:grid;
-  grid-template-columns:1.1fr 0.9fr;
+  grid-template-columns:1fr;
   gap:40px;
   align-items:center;
+  text-align: center;
 }
 .hero-body h1{
-  font-size:clamp(2.2rem,4.4vw,3.4rem);
+  font-size:clamp(2.5rem,5vw,4rem);
   color:var(--cream);
   margin:0 0 18px;
   line-height:1.08;
 }
 .hero-body p{
   color:var(--sage-line);
-  font-size:1.05rem;
-  max-width:46ch;
-  margin:0 0 28px;
+  font-size:1.1rem;
+  max-width:60ch;
+  margin:0 auto 28px;
 }
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap; justify-content: center;}
 .btn{
   display:inline-flex;align-items:center;gap:8px;
-  padding:13px 22px;
+  padding:15px 28px;
   border-radius:9px;
   font-weight:700;
-  font-size:0.95rem;
+  font-size:1rem;
   text-decoration:none;
   border:1px solid transparent;
   transition:transform .15s ease;
@@ -142,473 +157,5 @@ header.hero{
 .hero-art{
   position:relative;
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:repeat(4,1fr);
   gap:16px;
-}
-.hero-jar{
-  background:rgba(250,247,239,0.06);
-  border:1px solid rgba(250,247,239,0.15);
-  border-radius:16px;
-  padding:18px;
-  display:flex;flex-direction:column;align-items:center;gap:8px;
-}
-.hero-jar svg{width:56px;height:56px;}
-.hero-jar span{font-size:0.78rem;color:var(--sage-line);text-align:center;}
-
-/* ---------- category strip ---------- */
-.cat-strip{
-  max-width:1180px;
-  margin:-40px auto 0;
-  padding:0 24px;
-  position:relative;
-  z-index:3;
-}
-.cat-inner{
-  background:var(--white);
-  border-radius:16px;
-  box-shadow:0 18px 40px -20px rgba(23,54,40,0.35);
-  padding:16px;
-  display:flex;
-  gap:10px;
-  overflow-x:auto;
-}
-.cat-btn{
-  border:1px solid var(--sage-line);
-  background:var(--sage);
-  color:var(--forest-deep);
-  padding:10px 18px;
-  border-radius:24px;
-  font-size:0.86rem;
-  font-weight:700;
-  white-space:nowrap;
-  flex-shrink:0;
-}
-.cat-btn.active{background:var(--forest-deep);color:var(--cream);border-color:var(--forest-deep);}
-
-/* ---------- search ---------- */
-.toolbar{
-  max-width:1180px;
-  margin:26px auto 0;
-  padding:0 24px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:16px;
-  flex-wrap:wrap;
-}
-.search-box{
-  flex:1;min-width:220px;
-  display:flex;align-items:center;gap:8px;
-  background:var(--white);
-  border:1px solid var(--sage-line);
-  border-radius:10px;
-  padding:10px 14px;
-}
-.search-box input{
-  border:none;outline:none;background:transparent;
-  font-size:0.95rem;width:100%;color:var(--ink);
-}
-.result-count{font-size:0.85rem;color:var(--ink-soft);white-space:nowrap;}
-
-/* ---------- sections ---------- */
-main{max-width:1180px;margin:0 auto;padding:34px 24px 60px;}
-.section-block{margin-top:52px;}
-.section-head{
-  display:flex;align-items:baseline;justify-content:space-between;
-  border-bottom:1px solid var(--sage-line);
-  padding-bottom:10px;margin-bottom:22px;
-}
-.section-head h2{font-size:1.55rem;margin:0;}
-.section-head .count{font-size:0.85rem;color:var(--ink-soft);}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
-  gap:20px;
-}
-.card{
-  background:var(--white);
-  border:1px solid var(--sage-line);
-  border-radius:14px;
-  overflow:hidden;
-  display:flex;flex-direction:column;
-  transition:box-shadow .18s ease, transform .18s ease;
-}
-.card:hover{box-shadow:0 16px 30px -18px rgba(23,54,40,0.4);transform:translateY(-3px);}
-.card-art{
-  height:150px;
-  display:flex;align-items:center;justify-content:center;
-  position:relative;
-}
-.card-art svg{width:74px;height:74px;}
-.badge-oos{
-  position:absolute;top:10px;left:10px;
-  background:var(--danger);color:#fff;
-  font-size:0.7rem;font-weight:700;
-  padding:4px 9px;border-radius:20px;
-}
-.badge-pv{
-  position:absolute;top:10px;right:10px;
-  background:rgba(23,54,40,0.85);color:var(--gold-soft);
-  font-size:0.7rem;font-weight:700;
-  padding:4px 9px;border-radius:20px;
-}
-.card-body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:10px;flex:1;}
-.card-body h3{font-size:1rem;margin:0;line-height:1.3;color:var(--forest-deep);min-height:2.5em;}
-.price-row{display:flex;align-items:center;justify-content:space-between;margin-top:auto;}
-.price{font-family:'Fraunces',serif;font-size:1.25rem;color:var(--forest-deep);font-weight:600;}
-.order-btn{
-  display:inline-flex;align-items:center;gap:6px;
-  background:var(--forest-deep);color:var(--cream);
-  border:none;border-radius:8px;
-  padding:9px 14px;font-size:0.82rem;font-weight:700;
-}
-.order-btn:hover{background:var(--forest);}
-.order-btn.disabled{background:#c8cdc4;color:#7a8177;pointer-events:none;}
-.order-btn svg{width:15px;height:15px;}
-
-/* ---------- footer ---------- */
-footer{
-  background:var(--forest-deep);
-  color:var(--sage-line);
-  padding:44px 24px 26px;
-  margin-top:60px;
-}
-.footer-inner{
-  max-width:1180px;margin:0 auto;
-  display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;
-}
-.footer-col h3{color:var(--cream);font-size:1.1rem;margin:0 0 12px;}
-.footer-col p, .footer-col a{color:var(--sage-line);text-decoration:none;font-size:0.92rem;}
-.footer-col a{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
-.footer-bottom{
-  max-width:1180px;margin:34px auto 0;padding-top:18px;
-  border-top:1px solid rgba(250,247,239,0.12);
-  font-size:0.78rem;color:rgba(231,239,228,0.5);
-  text-align:center;
-}
-
-/* whatsapp float */
-.wa-float{
-  position:fixed;bottom:22px;right:22px;z-index:50;
-  background:#1ea952;color:#fff;
-  border-radius:50px;
-  padding:13px 20px;
-  display:flex;align-items:center;gap:9px;
-  font-weight:700;font-size:0.9rem;
-  text-decoration:none;
-  box-shadow:0 14px 26px -10px rgba(30,169,82,0.6);
-}
-.wa-float svg{width:20px;height:20px;}
-
-@media(max-width:860px){
-  .hero-body{grid-template-columns:1fr;}
-  .hero-art{grid-template-columns:repeat(4,1fr);}
-  .hero-jar span{display:none;}
-}
-[data-lang="en"] [data-es]{display:none;}
-[data-lang="es"] [data-en]{display:none;}
-</style>
-</head>
-<body data-lang="es">
-
-<div class="topbar">
-  <div class="contact-links">
-    <a href="https://wa.me/13057605842" target="_blank" rel="noopener">WhatsApp · 305 760 5842</a>
-    <a href="mailto:Charlesfer600@gmail.com">Charlesfer600@gmail.com</a>
-  </div>
-  <div class="lang-toggle">
-    <button type="button" class="active" data-setlang="es">ES</button>
-    <button type="button" data-setlang="en">EN</button>
-  </div>
-</div>
-
-<header class="hero">
-  <div class="nav">
-    <div class="brand">
-      <div class="brand-mark">CF</div>
-      <div class="brand-name">Charles<span>F</span> Shop</div>
-    </div>
-    <div class="nav-links">
-      <a href="#personal-care" data-es="Cuidado personal" data-en="Personal care"></a>
-      <a href="#suplementos" data-es="Suplementos" data-en="Supplements"></a>
-      <a href="#cocina" data-es="Cocina" data-en="Cookware"></a>
-      <a href="#promociones" data-es="Promociones" data-en="Promotions"></a>
-      <a href="#contacto" data-es="Contacto" data-en="Contact"></a>
-    </div>
-  </div>
-
-  <div class="hero-body">
-    <div>
-      <h1 data-es="Belleza, bienestar y cuidado personal, a un mensaje de distancia"
-          data-en="Beauty, wellness and personal care, one message away"></h1>
-      <p data-es="Catálogo completo de productos de belleza, salud e higiene personal. Elige lo que te guste y ordénalo directo por WhatsApp, sin complicaciones."
-         data-en="A full catalog of beauty, health and personal-care products. Pick what you like and order it straight through WhatsApp, no hassle."></p>
-      <div class="hero-cta">
-        <a class="btn btn-gold" href="https://wa.me/13057605842?text=Hola%20CharlesF%20Shop%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">
-          <span data-es="Ordenar por WhatsApp" data-en="Order on WhatsApp"></span>
-        </a>
-        <a class="btn btn-outline" href="#personal-care">
-          <span data-es="Ver catálogo" data-en="View catalog"></span>
-        </a>
-      </div>
-    </div>
-    <div class="hero-art" id="heroArt"></div>
-  </div>
-</header>
-
-<div class="cat-strip">
-  <div class="cat-inner" id="catNav"></div>
-</div>
-
-<div class="toolbar">
-  <div class="search-box">
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#5b6459" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-    <input id="searchInput" type="text" data-es-ph="Buscar un producto..." data-en-ph="Search a product...">
-  </div>
-  <div class="result-count" id="resultCount"></div>
-</div>
-
-<main id="catalog"></main>
-
-<footer id="contacto">
-  <div class="footer-inner">
-    <div class="footer-col">
-      <h3>CharlesF Shop</h3>
-      <p data-es="Productos de belleza, salud, higiene personal y ropa. Pedidos únicamente por WhatsApp o correo."
-         data-en="Beauty, health, personal-care and clothing products. Orders taken only via WhatsApp or email."></p>
-    </div>
-    <div class="footer-col">
-      <h3 data-es="Contacto" data-en="Contact"></h3>
-      <a href="https://wa.me/13057605842" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="#1ea952"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1s-.7 1-.9 1.2c-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.1-1.4-.1-.1-.3-.2-.5-.3z"/><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.5A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3.1.9.9-3-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
-        305 760 5842
-      </a>
-      <a href="mailto:Charlesfer600@gmail.com">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#e7c876" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-        Charlesfer600@gmail.com
-      </a>
-    </div>
-    <div class="footer-col">
-      <h3 data-es="Cómo ordenar" data-en="How to order"></h3>
-      <p data-es="1. Elige tu producto&#10;2. Toca &quot;Ordenar&quot;&#10;3. Confirma cantidad y dirección por WhatsApp"
-         data-en="1. Pick your product&#10;2. Tap &quot;Order&quot;&#10;3. Confirm quantity and address on WhatsApp" style="white-space:pre-line;"></p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span data-es="CharlesF Shop — pedidos por WhatsApp y correo" data-en="CharlesF Shop — orders via WhatsApp and email"></span>
-  </div>
-</footer>
-
-<a class="wa-float" href="https://wa.me/13057605842?text=Hola%20CharlesF%20Shop%2C%20tengo%20una%20pregunta" target="_blank" rel="noopener">
-  <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1s-.7 1-.9 1.2c-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.1-1.4-.1-.1-.3-.2-.5-.3z"/><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.5A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3.1.9.9-3-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
-  <span data-es="Pedir ahora" data-en="Order now"></span>
-</a>
-
-<script>
-/* ---------------- data ---------------- */
-const ICONS = {
-  tube: `<svg viewBox="0 0 64 64"><rect x="20" y="8" width="24" height="10" rx="3" fill="var(--gold)"/><path d="M22 18h20l-2 34a4 4 0 01-4 4H28a4 4 0 01-4-4z" fill="var(--forest)"/><rect x="24" y="24" width="16" height="4" fill="var(--gold-soft)" opacity="0.6"/></svg>`,
-  jar: `<svg viewBox="0 0 64 64"><rect x="16" y="22" width="32" height="30" rx="6" fill="var(--forest)"/><rect x="20" y="12" width="24" height="12" rx="4" fill="var(--gold)"/><rect x="20" y="30" width="24" height="6" fill="var(--sage)" opacity="0.5"/></svg>`,
-  bottle: `<svg viewBox="0 0 64 64"><rect x="26" y="6" width="12" height="10" fill="var(--gold)"/><path d="M24 16h16l4 8v30a4 4 0 01-4 4H24a4 4 0 01-4-4V24z" fill="var(--forest)"/><rect x="22" y="30" width="20" height="8" fill="var(--gold-soft)" opacity="0.5"/></svg>`,
-  soap: `<svg viewBox="0 0 64 64"><rect x="10" y="20" width="44" height="26" rx="8" fill="var(--gold)"/><rect x="16" y="26" width="32" height="14" rx="5" fill="var(--forest)" opacity="0.85"/></svg>`,
-  tea: `<svg viewBox="0 0 64 64"><path d="M12 26h32v14a10 10 0 01-10 10H22a10 10 0 01-10-10z" fill="var(--forest)"/><path d="M44 30h4a7 7 0 010 14h-4" fill="none" stroke="var(--gold)" stroke-width="4"/><path d="M20 14c2 4-2 5 0 9M30 14c2 4-2 5 0 9" stroke="var(--gold-soft)" stroke-width="3" fill="none" stroke-linecap="round"/></svg>`,
-  capsule: `<svg viewBox="0 0 64 64"><rect x="8" y="26" width="48" height="16" rx="8" fill="var(--gold)"/><path d="M32 26h16a8 8 0 010 16H32z" fill="var(--forest)"/></svg>`,
-  pad: `<svg viewBox="0 0 64 64"><rect x="14" y="16" width="36" height="34" rx="14" fill="var(--forest)"/><rect x="20" y="24" width="24" height="4" fill="var(--gold-soft)" opacity="0.6"/><rect x="20" y="32" width="24" height="4" fill="var(--gold-soft)" opacity="0.4"/></svg>`,
-  cup: `<svg viewBox="0 0 64 64"><path d="M14 20h30v20a15 15 0 01-15 15 15 15 0 01-15-15z" fill="var(--forest)"/><path d="M44 26h4a8 8 0 010 16h-4" fill="none" stroke="var(--gold)" stroke-width="4"/></svg>`,
-  pot: `<svg viewBox="0 0 64 64"><ellipse cx="32" cy="24" rx="20" ry="6" fill="var(--gold)"/><path d="M12 24h40v18a16 16 0 01-16 16h-8a16 16 0 01-16-16z" fill="var(--forest)"/><rect x="4" y="26" width="10" height="4" rx="2" fill="var(--gold-soft)"/><rect x="50" y="26" width="10" height="4" rx="2" fill="var(--gold-soft)"/></svg>`,
-  deo: `<svg viewBox="0 0 64 64"><rect x="22" y="10" width="20" height="8" rx="2" fill="var(--gold)"/><rect x="18" y="18" width="28" height="34" rx="8" fill="var(--forest)"/><rect x="24" y="28" width="16" height="4" fill="var(--gold-soft)" opacity="0.6"/></svg>`,
-  gift: `<svg viewBox="0 0 64 64"><rect x="10" y="24" width="44" height="30" rx="4" fill="var(--forest)"/><rect x="10" y="24" width="44" height="10" fill="var(--gold)"/><rect x="28" y="10" width="8" height="44" fill="var(--gold-soft)"/></svg>`,
-};
-
-const CATS = [
-  {id:"personal-care", es:"Cuidado personal", en:"Personal care"},
-  {id:"suplementos", es:"Suplementos y bebidas", en:"Supplements & beverages"},
-  {id:"cocina", es:"Cocina", en:"Cookware"},
-  {id:"promociones", es:"Promociones", en:"Promotions"},
-];
-
-const PRODUCTS = [
-  // Personal Care
-  {cat:"personal-care", icon:"tube", price:8, pv:3.5, es:"Pasta dental de té blanco 200g", en:"White Tea Toothpaste 200g"},
-  {cat:"personal-care", icon:"tube", price:8, pv:3, es:"Refrescante bucal Longrich", en:"Longrich Mouth Freshener"},
-  {cat:"personal-care", icon:"jar", price:11, pv:5, es:"Crema de manos aclarante Longrich", en:"Longrich Brightening Hand Cream"},
-  {cat:"personal-care", icon:"bottle", price:11, pv:4, es:"Aceite de serpiente Longrich", en:"Longrich Snake Oil"},
-  {cat:"personal-care", icon:"bottle", price:11, pv:4, es:"Loción rejuvenecedora", en:"Rejuvenating Lotion"},
-  {cat:"personal-care", icon:"bottle", price:12, pv:5, es:"Leche SOD placenta de oveja Longrich 200ml", en:"Longrich Sheep Placenta SOD Milk 200ml"},
-  {cat:"personal-care", icon:"bottle", price:12, pv:5, es:"Gel de baño hidratante herbal", en:"Herbal Moisturizing Body Wash"},
-  {cat:"personal-care", icon:"soap", price:13, pv:6, es:"Jabón de carbón de bambú 100g x3", en:"Bamboo Charcoal Soap 100g*3"},
-  {cat:"personal-care", icon:"bottle", price:14, pv:6, es:"Gel de ducha aclarante bilis de serpiente y niacinamida", en:"Snake Bile Nicotinamide Brightening Shower Gel"},
-  {cat:"personal-care", icon:"bottle", price:26, pv:10, es:"Aceite de baño de oliva dorado 1L", en:"Golden Olive Bath Oil 1L"},
-  {cat:"personal-care", icon:"bottle", price:85, pv:30, es:"Spray de prebióticos Evergreen 120ml", en:"Evergreen Prebiotics Spray 120ml"},
-  {cat:"personal-care", icon:"pad", price:92, pv:45, es:"Toalla sanitaria magnética Superbklean (uso nocturno)", en:"Superbklean Magnetic Sanitary Napkin (Night Use)"},
-  {cat:"personal-care", icon:"pad", price:92, pv:45, es:"Toalla sanitaria magnética Superbklean (combo)", en:"Superbklean Magnetic Sanitary Napkin (Combo)"},
-  {cat:"personal-care", icon:"pad", price:92, pv:45, es:"Toalla sanitaria magnética Superbklean (protector diario)", en:"Superbklean Magnetic Sanitary Napkin (Panty Liner)"},
-  {cat:"personal-care", icon:"soap", price:130, pv:60, es:"Jabón de carbón de bambú, paquete 10+1", en:"Bamboo Charcoal Soap 10+1 Pack"},
-  {cat:"personal-care", icon:"tube", price:132, pv:45, es:"Pasta dental multiefecto de té blanco (100g) x30 uds", en:"White Tea Multi-Effect Toothpaste (100g)×30 pcs"},
-
-  // Supplements & Beverages
-  {cat:"suplementos", icon:"tea", price:11, pv:5, es:"Té verde Longrich", en:"Longrich Green Tea"},
-  {cat:"suplementos", icon:"tea", price:11, pv:5, es:"Té rosa Longrich", en:"Longrich Pink Tea"},
-  {cat:"suplementos", icon:"tea", price:11, pv:5, es:"Té marrón Longrich", en:"Longrich Brown Tea"},
-  {cat:"suplementos", icon:"capsule", price:13, pv:6.5, es:"Polvo de germen de soja prebiótico con calcio y multivitaminas", en:"Prebiotic Soy Germ Powder With High Calcium and Multivitamins"},
-  {cat:"suplementos", icon:"capsule", price:15, pv:7, es:"Superior para caballero", en:"Gentleman's Superior", oos:true},
-  {cat:"suplementos", icon:"capsule", price:15, pv:7, es:"Superior para dama", en:"Lady's Superior", oos:true},
-  {cat:"suplementos", icon:"cup", price:16, pv:6, es:"Café de Cordyceps Militaris 18g Longrich (10 uds)", en:"Longrich 18g Cordyceps Militaris Coffee (10 pcs)"},
-  {cat:"suplementos", icon:"capsule", price:17, pv:8, es:"Tabletas de vitamina C Longrich", en:"Longrich Vitamin C Tablets"},
-  {cat:"suplementos", icon:"capsule", price:20, pv:10, es:"Tabletas de enzima de manzana", en:"Apple Enzyme Tablets"},
-  {cat:"suplementos", icon:"capsule", price:23, pv:11, es:"Masticables de calcio sabor a leche Longrich", en:"Longrich Milk Flavored Calcium Chewables"},
-  {cat:"suplementos", icon:"capsule", price:40, pv:20, es:"Glucosamina y condroitina Longrich", en:"Longrich Glucosamine & Chondroitin"},
-  {cat:"suplementos", icon:"capsule", price:55, pv:25, es:"Aceite de espino amarillo (120 cápsulas blandas)", en:"Sea Buckthorn Berry Oil (120 softgels)"},
-  {cat:"suplementos", icon:"capsule", price:60, pv:25, es:"Cápsulas de Cordyceps Militaris Longrich (60 cápsulas)", en:"Longrich Cordyceps Militaris Capsules (60 capsules)"},
-  {cat:"suplementos", icon:"capsule", price:99, pv:50, es:"Cápsulas de NMN Nicotinamida Mononucleótido", en:"NMN Nicotinamide Mononucleotide Capsules"},
-
-  // Cookware
-  {cat:"cocina", icon:"cup", price:30, pv:0, es:"Kit de demostración de vaso alcalino", en:"Alkaline Cup Demonstration Kit"},
-  {cat:"cocina", icon:"bottle", price:97, pv:60, es:"Botella de agua estilo Classy", en:"Classy Style Water Bottle"},
-  {cat:"cocina", icon:"pot", price:388, pv:240, es:"Olla de energía estilo Classy (18cm)", en:"Classy Style Energy Pot (18cm)"},
-  {cat:"cocina", icon:"pot", price:553, pv:360, es:"Olla de energía estilo Classy (24cm)", en:"Classy Style Energy Pot (24cm)"},
-  {cat:"cocina", icon:"pot", price:574, pv:370, es:"Olla de energía estilo Classy (28cm)", en:"Classy Style Energy Pot (28cm)"},
-
-  // Promotions
-  {cat:"promociones", icon:"deo", price:36, pv:12, es:"Desodorante roll-on Longrich — paquete de 6 unidades", en:"Longrich Roll-on Deodorant – 6-Unit Bundle"},
-  {cat:"promociones", icon:"gift", price:140.4, pv:60, es:"Paquete de crédito de tienda 1", en:"Store Credit Gift Pack 1", oos:true},
-  {cat:"promociones", icon:"gift", price:551.4, pv:240, es:"Paquete de crédito de tienda 2", en:"Store Credit Gift Pack 2", oos:true},
-];
-
-/* ---------------- language ---------------- */
-let lang = "es";
-function setLang(l){
-  lang = l;
-  document.body.setAttribute("data-lang", l);
-  document.querySelectorAll(".lang-toggle button").forEach(b=>{
-    b.classList.toggle("active", b.dataset.setlang === l);
-  });
-  const si = document.getElementById("searchInput");
-  si.placeholder = l === "es" ? si.dataset.esPh : si.dataset.enPh;
-  render();
-}
-document.querySelectorAll("[data-setlang]").forEach(b=>{
-  b.addEventListener("click", ()=> setLang(b.dataset.setlang));
-});
-document.getElementById("searchInput").placeholder = document.getElementById("searchInput").dataset.esPh;
-
-/* ---------------- hero art ---------------- */
-const heroArt = document.getElementById("heroArt");
-["jar","tea","capsule","pot"].forEach(k=>{
-  const d = document.createElement("div");
-  d.className = "hero-jar";
-  d.innerHTML = ICONS[k] + `<span data-es-fill></span>`;
-  heroArt.appendChild(d);
-});
-const heroLabels = {es:["Cuidado de la piel","Tés e infusiones","Suplementos","Ollas de energía"],
-                     en:["Skin care","Teas & infusions","Supplements","Energy pots"]};
-function fillHeroLabels(){
-  [...heroArt.children].forEach((d,i)=>{
-    d.querySelector("span").textContent = heroLabels[lang][i];
-  });
-}
-fillHeroLabels();
-
-/* ---------------- category nav ---------------- */
-const catNav = document.getElementById("catNav");
-let activeCat = "all";
-function buildCatNav(){
-  catNav.innerHTML = "";
-  const allBtn = document.createElement("button");
-  allBtn.className = "cat-btn" + (activeCat==="all" ? " active":"");
-  allBtn.textContent = lang==="es" ? "Todos los productos" : "All products";
-  allBtn.onclick = ()=>{activeCat="all"; buildCatNav(); render();};
-  catNav.appendChild(allBtn);
-  CATS.forEach(c=>{
-    const b = document.createElement("button");
-    b.className = "cat-btn" + (activeCat===c.id ? " active":"");
-    b.textContent = lang==="es" ? c.es : c.en;
-    b.onclick = ()=>{activeCat=c.id; buildCatNav(); document.getElementById(c.id)?.scrollIntoView({behavior:"smooth",block:"start"}); render();};
-    catNav.appendChild(b);
-  });
-}
-
-/* ---------------- render catalog ---------------- */
-const catalog = document.getElementById("catalog");
-const resultCount = document.getElementById("resultCount");
-const searchInput = document.getElementById("searchInput");
-searchInput.addEventListener("input", render);
-
-function waLink(p){
-  const name = lang==="es" ? p.es : p.en;
-  const msg = lang==="es"
-    ? `Hola CharlesF Shop, quiero ordenar: ${name} ($${p.price})`
-    : `Hi CharlesF Shop, I'd like to order: ${name} ($${p.price})`;
-  return `https://wa.me/13057605842?text=${encodeURIComponent(msg)}`;
-}
-
-function render(){
-  const term = searchInput.value.trim().toLowerCase();
-  catalog.innerHTML = "";
-  let total = 0;
-
-  CATS.forEach(cat=>{
-    if(activeCat !== "all" && activeCat !== cat.id) return;
-    const items = PRODUCTS.filter(p=>{
-      if(p.cat !== cat.id) return false;
-      if(!term) return true;
-      const name = (lang==="es" ? p.es : p.en).toLowerCase();
-      return name.includes(term) || p.es.toLowerCase().includes(term) || p.en.toLowerCase().includes(term);
-    });
-    if(items.length === 0) return;
-    total += items.length;
-
-    const block = document.createElement("div");
-    block.className = "section-block";
-    block.id = cat.id;
-    block.innerHTML = `
-      <div class="section-head">
-        <h2>${lang==="es" ? cat.es : cat.en}</h2>
-        <span class="count">${items.length} ${lang==="es" ? "productos" : "products"}</span>
-      </div>
-      <div class="grid"></div>`;
-    const grid = block.querySelector(".grid");
-
-    items.forEach(p=>{
-      const name = lang==="es" ? p.es : p.en;
-      const card = document.createElement("div");
-      card.className = "card";
-      card.innerHTML = `
-        <div class="card-art" style="background:linear-gradient(160deg,var(--sage),var(--white));">
-          ${p.oos ? `<span class="badge-oos">${lang==="es"?"Agotado":"Out of stock"}</span>` : ""}
-          <span class="badge-pv">${p.pv} PV</span>
-          ${ICONS[p.icon]}
-        </div>
-        <div class="card-body">
-          <h3>${name}</h3>
-          <div class="price-row">
-            <span class="price">$${p.price}</span>
-            ${p.oos
-              ? `<span class="order-btn disabled">${lang==="es"?"No disponible":"Unavailable"}</span>`
-              : `<a class="order-btn" href="${waLink(p)}" target="_blank" rel="noopener">
-                   <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1s-.7 1-.9 1.2c-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.1-1.4-.1-.1-.3-.2-.5-.3z"/><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.5A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3.1.9.9-3-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
-                   ${lang==="es"?"Ordenar":"Order"}
-                 </a>`}
-          </div>
-        </div>`;
-      grid.appendChild(card);
-    });
-    catalog.appendChild(block);
-  });
-
-  if(total === 0){
-    catalog.innerHTML = `<p style="text-align:center;color:var(--ink-soft);padding:40px 0;">${lang==="es" ? "No se encontraron productos." : "No products found."}</p>`;
-  }
-  resultCount.textContent = `${total} ${lang==="es" ? "resultados" : "results"}`;
-}
-
-buildCatNav();
-render();
-
-/* re-fill hero labels + placeholder on lang change */
-const origSetLang = setLang;
-setLang = function(l){ origSetLang(l); fillHeroLabels(); buildCatNav(); };
-</script>
-</body>
-</html>
